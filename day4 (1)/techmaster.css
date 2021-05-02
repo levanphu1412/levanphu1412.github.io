@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#hinhtron {
+    height: 60px;
+    width: 60px;
+    background-color:#0084FF;
+    border-radius: 50%;
+    position: fixed;
+    right: 25px;
+    bottom: 30px;
+}
+.fa-facebook-messenger {
+    font-size: 40px;
+    color: #FFFFFF;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+body {
+    
+}
+
+#container {}
+
+#navigation {
+    width: 100%;
+    height: 60px;
+    background-color: #34465c;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.logo {
+    width: 120px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    margin-left: 40px;
+}
+
+.avatar {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-list {
+    display: flex;
+}
+
+.menu-list li {
+    list-style-type: none;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    margin: 0 15px;
+}
+
+.caret {
+    margin-left: 4px;
+    font-size: 18px;
+}
+.fa-shopping-cart {
+    font-size: 18px;
+    margin-left: 10px;
+}
+#content1 {
+    padding: 48px 48px 0px 48px;
+    width: 100%;
+}
+.rectangle {
+    width: 100%;
+    height: 481px;
+    display: flex;
+    flex-direction: row;
+}
+#right {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#left {
+    height: 100%;
+    margin-right: 30px;
+}
+.top, .middle1, .middle2, .bottom {
+    margin-bottom: 16px;
+    border: solid 1px #F1F1F1;
+    border-bottom: solid 3px #F1F1F1;
+    width: 100%;
+}
+#hinhdacbiet {
+    padding: 40x 70px 40px 70px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 80px; 
+    margin-bottom: 80px;
+}
+.anh {
+    text-align: center;
+    margin-right: 30px;
+    padding: 20px;
+    line-height: 1.5;
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 60px 0px;
+}
+#content2 {
+    background-color: #E4F2FD;
+    margin: 0px 15px;
+    padding-bottom: 80px;
+}
+.new-list .list1{
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.new-list .list2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.new-item {
+    width: 29.5%;
+    margin-right: 15px;
+    margin-left: 15px;
+    line-height: 1.5;
+    border: solid 2px #C9D5DF;
+    
+}
+.noidung {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.new-item1 {
+    line-height: 1.5;
+    border: solid 2px #C9D5DF;
+    width: 385px;
+    margin-left: 47px;
+
+}
+#hinhvuong1 {
+    height: 36px;
+    width: 36px;
+    border: solid 2px #2196F3;
+    border-radius: 5px;
+    position: relative;
+    left: 70px;
+    bottom: 95px;
+}
+#hinhvuong2 {
+    height: 36px;
+    width: 36px;
+    border: solid 2px #2196F3;
+    border-radius: 5px;
+    position: relative;
+    left: 1190px;
+    bottom: 125px;
+}
+.fa-chevron-left {
+    color:#757575;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.fa-chevron-right {
+    color:#757575;
+    margin-top: 8px;
+    margin-left: 10px;
+}
+.list3 {
+    display: flex;
+    flex-direction: row;
+    padding-left: 45px;
+}
+.hocvien {
+    width: 30%;
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.5;
+    border: solid 2px #C9D5DF;
+}
+#content3 {
+    margin-bottom: 100px;
+}
+#content4 {
+    background-color: #E4F2FD;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+iframe {
+    width: 1220px;
+    height: 700px;
+    margin: 80px 50px;
+
+}
+#footer {
+    background-color: #464646;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 40px 50px 40px 50px;
+}
+.tag {
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 2;
+    width: 25%;
+}
+.tag h4 {
+    color:#FFFFF3;
+}
+.tag p {
+    color: #919294;
+}
+.logomxh {
+    color: #919294;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.phule {
+    width: ;
+}
+
+
+
+    
+
+
