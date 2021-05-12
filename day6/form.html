@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #container {
+            height: 700px;
+            width: 700px;
+            padding: 100px
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form action="#" method="POST"> 
+        <label for="Username">Username:</label>
+        <input type="text" name="Username" placeholder="text here..."/>
+        <br/>
+        <br/>
+        <label for="password">password:</label>
+        <input id="password" type="password" name="Usename" placeholder="matkhau"/>
+        <br />
+        <br/>
+        <label for="">Gender</label>
+        <input id="male" type="radio" name="gender" value="male" /><label for="male">Male</label>
+        <input id="female" type="radio" name="gender" value="female" /><label for="female">Female</label>
+        <input id="ohter" type="radio" name="gender" value="other" /><label for="other">Other</label>
+        <br />
+        <br/>
+        <label for="">favorite</label>
+        <input id="read" type="checkbox" name="favorite" value="read" /><label for="read">Read Book</label>
+        <input id="listen" type="checkbox" name="favorite" value="liten"/><label for="read">Listen to music</label>
+        <input id="swim" type="checkbox" name="favorite" value="swim"/><label for="read">Swim</label>
+        <br />
+        <br/>
+        <label for="">City</label>
+        <select name="city" id="city">
+            <option value="ha-noi">Ha noi</option>
+            <option value="hue">Hue</option>
+            <option value="tphcm">Ho Chi Minh</option>
+            <option value="thanhhoa">Thanh hoa</option>
+        </select>
+        <br/>
+        <br/>
+        <button type="submit">Submit</button>
+        <button type="reset">reset</button>
+    </form>
+    </div>
+</body>
+</html>
