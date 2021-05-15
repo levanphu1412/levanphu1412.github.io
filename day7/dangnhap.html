@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+    .login-form {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    padding-top: 15px;
+    width: 400px;
+    height: 340px;
+    border: solid 1px #DDDFE2 ;
+    border-radius: 10px;   
+    text-align: center;
+    background-color: white;
+    box-shadow: 0px 1px 1px 1px #DDDFE2;
+}
+input {
+    height: 50px;
+    width: 360px;
+    border-radius: 6px;
+    padding-left: 10px;
+    border: solid 1px #DDDFE2;
+}
+.dangnhap button {
+    height: 48px;
+    width: 360px;
+    border-radius: 6px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 23px;
+    background-color: #166FE5;
+    color: white;
+    border: none;
+}
+a {
+    text-decoration: none;
+    color: #166FE5;
+}
+hr {
+   margin: 20px 15px;
+}
+.taomoi button {
+    height: 48px;
+    width: 178px;
+    text-align: center;
+    background-color: #36A420;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+}
+body {
+    background: url(ff4.jpg);
+    background-size: cover;
+}
+.home {
+    font-size: 50px;
+    color: white;
+}
+    </style>
+</head>
+<body>
+    <a href="./do_an.html"><i class="fas fa-home home"></i></a>
+
+    <div class="login-form">
+        <form action="#" method="POST">
+            <input type="text" name="username" placeholder="Email hoặc số điện thoại" />
+            <br />
+            <br />
+            <input type="password" name="matkhau" placeholder="Mật khẩu" />
+            <br />
+            <div class="dangnhap"><button>Đăng nhập</button></div>
+            <br />
+            <a href="https://www.facebook.com/recover/initiate/?ars=facebook_login&privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjIwNzIyMjYzLCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D"
+                target="_blank" title="quenmatkhau">Quên mật khẩu ?</a>
+
+            <hr />
+            <div class="taomoi"><button>Tạo tài khoản mới</button></div>
+        </form>
+    </div>
+</body>
+</html>
