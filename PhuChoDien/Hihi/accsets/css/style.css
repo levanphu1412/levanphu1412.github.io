@@ -39,7 +39,7 @@ html{
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url(/accsets/img/hinh-anh-chibi-tinh-yeu-cute-de-thuong.jpg) top center / cover no-repeat;
+    /* background: url(/accsets/img/hinh-anh-chibi-tinh-yeu-cute-de-thuong.jpg) top center / cover no-repeat; */
 }
 
 .content-text {
