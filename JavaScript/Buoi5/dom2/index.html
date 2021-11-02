@@ -1,99 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hoàng Dương</title>
-
-    <style>
-        .box {
-            display: block;
-            background-color: #f3f3f3;
-            width: 100px;
-            height: 100px;
-            border-radius: 10px;
-            float: left;
-            margin: 5px;
-        }
-
-        .box:hover {
-            transform: scale(.9);
-            transition-duration: .5s;
-            opacity: .8;
-            cursor: pointer;
-        }
-
-        .box:active {
-            transform: scale(1.5);
-            transition-duration: .5s;
-        }
-
-        .hide {
-            display : none;
    
+    <style>
+      .box {
+        display: block;
+        background-color: #f3f3f3;
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+        float: left;
+        margin: 5px;
+      }
+
+      .box:hover {
+        transform: scale(0.9);
+        transition-duration: 0.5s;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .box:active {
+        transform: scale(1.5);
+        transition-duration: 0.5s;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      @keyframes change-size {
+        from {
+          transform: scale(1);
         }
+        to {
+          transform: scale(3);
+        }
+      }
+
+      h2 {
+        animation: title 2s infinite;
+      }
+
+      @keyframes fontbulger {
+      }
+
+      @keyframes title {
+        25% {
+          color: red;
+        }
+        50% {
+          color: yellow;
+        }
+        75% {
+          color: blue;
+        }
+        100% {
+          color: green;
+        }
+      }
+     
+
+
+      body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+ 
+
+
+
+
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="wrap">
+      <h1>Phú Chó Điên</h1>
+      <h2>Hoàng Hải Dương</h2>
+      <button id="btn">More boxes</button>
+      <button id="hide">Hide</button>
+      <h4 id="score">Total box:<span class="points"></span></h4>
 
-    <body>
-        <div class="wrap">
-            <h1>Phú Chó Điên</h1>
-            <h2>Hoàng Hải Dương</h2>
-            <button id="btn">More boxes</button>
-            <button id="hide">Hide</button>
-            <h4 id="score"> Total box:<span class="points"></span></h4>
-
-            <div class="boxes">
-            </div>
-        </div>
-    </body>
+      <div class="boxes"></div>
+    </div>
 
     <script>
-        // Viết mã ở đây
-        const span = document.querySelector('span')
-        let colors = [ '#3498db', '#9b59b6', '#e74c3c', '#2c3e50', '#d35400']
-        let count = colors.length;
+      // Viết mã ở đây
+      const span = document.querySelector("span");
+      let colors = ["red", "green", "blue", "yellow", "black", "pink"];
+      let count = colors.length;
 
-        function addBox() {
-          
-            for(let i = 0; i < colors.length; i++) {
-            
-            const div = document.createElement('div')
-            div.style.backgroundColor = colors[i]
-            div.classList.add('box')
-            document.body.appendChild(div)
-            span.innerText = colors.length
+      function addBox() {
+        for (let i = 0; i < colors.length; i++) {
+          const div = document.createElement("div");
+          div.style.backgroundColor = colors[i];
+          div.classList.add("box");
+          document.body.appendChild(div);
+          span.innerText = colors.length;
 
-            div.addEventListener('click', function(){
-                div.classList.add('hide')
-                count -= 1
-                span.innerText = count
-                })
-            }            
+          div.addEventListener("click", function () {
+            div.classList.add("hide");
+            count -= 1;
+            span.innerText = count;
+          });
         }
+      }
 
-        addBox()
-        const moreBox = document.querySelector('#btn')
-            moreBox.addEventListener('click', function() {
-                addBox()
-                count += colors.length
-                span.innerText = count
-        })
+      addBox();
+      const moreBox = document.querySelector("#btn");
+      moreBox.addEventListener("click", function () {
+        addBox();
+        count += colors.length;
+        span.innerText = count;
+      });
 
-        const h2 = document.querySelector('h2')
-        const hide = document.querySelector('#hide')
-        hide.addEventListener('click', function(){
-            h2.classList.toggle('hide')
-            if(h2.classList.contains('hide')){
-                hide.innerText = "Show"
-            }else {
-                hide.innerText = "Hide"
-            }
-        })
+      const h2 = document.querySelector("h2");
+      const hide = document.querySelector("#hide");
+      hide.addEventListener("click", function () {
+        h2.classList.toggle("hide");
+        if (h2.classList.contains("hide")) {
+          hide.innerText = "Show";
+        } else {
+          hide.innerText = "Hide";
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
