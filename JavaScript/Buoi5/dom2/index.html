@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hoàng Dương</title>
 
     <style>
         .box {
@@ -31,6 +31,7 @@
 
         .hide {
             display : none;
+   
         }
     </style>
 </head>
@@ -39,8 +40,10 @@
 
     <body>
         <div class="wrap">
-            <h1> JS DOM</h1>
+            <h1>Phú Chó Điên</h1>
+            <h2>Hoàng Hải Dương</h2>
             <button id="btn">More boxes</button>
+            <button id="hide">Hide</button>
             <h4 id="score"> Total box:<span class="points"></span></h4>
 
             <div class="boxes">
@@ -79,7 +82,17 @@
                 count += colors.length
                 span.innerText = count
         })
-    
+
+        const h2 = document.querySelector('h2')
+        const hide = document.querySelector('#hide')
+        hide.addEventListener('click', function(){
+            h2.classList.toggle('hide')
+            if(h2.classList.contains('hide')){
+                hide.innerText = "Show"
+            }else {
+                hide.innerText = "Hide"
+            }
+        })
     </script>
 </body>
 
