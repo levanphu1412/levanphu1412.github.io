@@ -177,67 +177,33 @@
       const tbody = document.querySelector("tbody");
       let id = 1;
       for (let i = 0; i < student_warning.students.length; i++) {
-
-        const row = document.createElement("tr");
-        const stt = document.createElement("td");
-            stt.innerHTML = id;
-            row.appendChild(stt);
+        let student = student_warning.students[i]
+        let rowSpan = student.detailInfo.length
+        for (let j = 0;j < student_warning.students[i].detailInfo.length; j++) {
+            const row = document.createElement("tr");
+            if(j == 0) {
+              row.innerHTML = 
+              `
+            <td rowspan="${rowSpan}">${id}</td>
+            <td rowspan="${rowSpan}">${student.name}</td>
+            <td rowspan="${rowSpan}">${student.email}</td>
+            <td rowspan="${rowSpan}">${student.phone}</td>
+            <td rowspan="${rowSpan}">${student.totalOff}/${student.sessions}</td>
+            <td>${student.detailInfo[j].date}</td>
+            <td>${student.detailInfo[j].note}</td>
+            <td>${student.detailInfo[j].teacher_name}</td>
+              `
+            }else {
+              row.innerHTML = `
+            <td>${student.detailInfo[j].date}</td>
+            <td>${student.detailInfo[j].note}</td>
+            <td>${student.detailInfo[j].teacher_name}</td>
+            `;
+            }
+            tbody.appendChild(row)
             
-
-          const name = document.createElement("td");
-          name.innerHTML = student_warning.students[i].name;
-          row.appendChild(name);
-
-          const email = document.createElement("td");
-          email.innerHTML = student_warning.students[i].email;
-          row.appendChild(email);
-
-          const phone = document.createElement("td");
-          phone.innerHTML = student_warning.students[i].phone;
-          row.appendChild(phone);
-
-          const soBuoiNghi = document.createElement("td");
-          soBuoiNghi.innerHTML =
-            student_warning.students[i].totalOff +
-            "/" +
-            student_warning.students[i].sessions;
-          row.appendChild(soBuoiNghi);
-          
-          const date = document.createElement("td");
-          
-          row.appendChild(date);
-
-          const note = document.createElement("td");
-          row.appendChild(note);
-
-          const teacher_name = document.createElement("td");
-          row.appendChild(teacher_name);
-
-        for (
-          let j = 0;j < student_warning.students[i].detailInfo.length; j++) {
-
-            const row1 = document.createElement('p')
-            
-            
-            row1.innerHTML = student_warning.students[i].detailInfo[j].date;
-            date.appendChild(row1)
-            
-         
-
-          const row2 = document.createElement("p");
-          row2.innerHTML = student_warning.students[i].detailInfo[j].note;
-          note.appendChild(row2);
-
-          const row3 = document.createElement("p");
-          row3.innerHTML =
-            student_warning.students[i].detailInfo[j].teacher_name;
-          teacher_name.appendChild(row3);
-
-         
         }
-
-        tbody.appendChild(row);
-          id++;
+        id++;
       }
 
       const class_inner = document.querySelector('.class-inner')
